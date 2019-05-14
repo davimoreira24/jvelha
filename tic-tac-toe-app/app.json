@@ -24,6 +24,8 @@
     ],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    "description": "This is my first React Native App",
+    "githubUrl": "https://github.com/Milexys/SCL007-TicTacToe"
   }
 }
