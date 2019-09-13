@@ -54,7 +54,7 @@ export default class GameScreen extends React.Component {
       else if (sum === -3) {return -1}
     }
 
-    //check diagonals
+    //checando diagonais
     sum = arr[0][0] + arr[1][1] + arr[2][2]
     if (sum === 3) {return 1}
     else if (sum === -3) {return -1}
@@ -63,23 +63,23 @@ export default class GameScreen extends React.Component {
     if (sum === 3) {return 1}
     else if (sum === -3) {return -1}
 
-    //There are no winners
+    //Sem ganhadores
 
     return 0;
 
   }
   onTilePress = (row, col) => {
-    //Don't allow tiles to change
+    //Sem mudança de titulos
     this.state.totalMoves++;
     if(this.state.totalMoves === 9){
-        alert("It's a Tie");
+        alert("Empatezada");
         this.initializeGame();
     }
     let value = this.state.gameState[row][col]
     if (value !== 0) { return }
     let currentPlayer = this.state.currentPlayer;
 
-    //Set the correct tile
+    //Setando o titulo correto
 
     let arr = this.state.gameState.slice()
     arr[row][col] = currentPlayer;
@@ -87,7 +87,7 @@ export default class GameScreen extends React.Component {
       gameState: arr,
     })
 
-    //Switch to other player
+    //Troca pra outro player
     let nextPlayer = (currentPlayer === 1) ? -1 : 1
     this.setState({
       currentPlayer: nextPlayer,
@@ -103,14 +103,14 @@ export default class GameScreen extends React.Component {
             playerO:false
           })
        }
-    //Check Winner
+    //Vencedor
     let winner = this.getWinnerPlayer()
     if (winner == 1) {
-      alert("Player X is the Winner");
+      alert("Jogador X Ganhou");
       this.initializeGame();
     }
     else if (winner == -1) {
-      alert("Player O is the Winner");
+      alert("Jogador O Ganhou");
       this.initializeGame();
     }
   }
@@ -175,7 +175,7 @@ export default class GameScreen extends React.Component {
         </View>
         <View style={{paddingTop: 50}}>
           <Button 
-          title="New Game" 
+          title="Novo Jogo" 
           onPress={() => this.initializeGame()} 
           color='black'></Button>
         </View>

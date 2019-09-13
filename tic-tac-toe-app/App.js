@@ -34,7 +34,7 @@ export default class App extends React.Component {
             </View>
             <View style={{paddingTop: 40}}>
             <Button 
-            title="Let's Play!" 
+            title="Bora jogar!" 
             color= 'black'
             onPress={()=> this.startButton()}
             />
