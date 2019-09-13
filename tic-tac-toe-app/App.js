@@ -24,7 +24,7 @@ export default class App extends React.Component {
         (
           <View style={{justifyContent:'center', alignItems:'center'}}>
             <View style={[styles.banner, {marginBottom: 40}]}>
-              <Text style={{fontSize: 60, fontWeight: 'bold'}}>TIC TAC TOE</Text>
+              <Text style={{fontSize: 60, fontWeight: 'bold'}}>Jogo da Velha</Text>
             </View>
             <View>
               <Image
