@@ -24,7 +24,7 @@ export default class App extends React.Component {
         (
           <View style={{justifyContent:'center', alignItems:'center'}}>
             <View style={[styles.banner, {marginBottom: 40}]}>
-              <Text style={{fontSize: 60, fontWeight: 'bold'}}>Jogo da Velha</Text>
+              <Text style={{fontSize: 18, fontWeight: 'bold',marginLeft:8}}>Jogo da Velha</Text>
             </View>
             <View>
               <Image
@@ -50,9 +50,7 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#325ca8'
   },
   banner: {
     width: 365,

@@ -132,7 +132,7 @@ export default class GameScreen extends React.Component {
     return (
       <View style={{justifyContent:'center', alignItems:'center'}}>
         <View style={styles.banner}>
-          <Text style={styles.title}>Jogo da Velha</Text>
+          <Text style={styles.title}>Jogo da Velhazada</Text>
         </View> 
         <View style={{paddingBottom: 20}}>
         {this.state.playerX && <Text style={{fontSize: 30, color:'red'}}>Jogador X</Text> }
