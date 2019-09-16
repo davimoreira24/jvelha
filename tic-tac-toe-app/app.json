@@ -3,7 +3,7 @@
     "name": "Tic Tac Toe",
     "slug": "tic-tac-toe-app",
     "privacy": "public",
-    "sdkVersion": "32.0.0",
+    "sdkVersion": "34.0.0",
     "platforms": [
       "android"
     ],
@@ -21,14 +21,13 @@
     "assetBundlePatterns": [
       "**/*"
     ],
-    "ios": {
-      "supportsTablet": true
+    "android": {
+      "package": "com.example.jvelha"
     },
+  
     "description": "Jogo da velha para teste",
     "githubUrl": "https://github.com/davimoreira24/jvelha"
-  },
-  "android": {
-    "package": "com.yourcompany.yourappname"
   }
+  
 
 }

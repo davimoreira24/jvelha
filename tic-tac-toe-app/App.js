@@ -28,8 +28,9 @@ export default class App extends React.Component {
             </View>
             <View>
               <Image
-                source={{ uri: 'https://upload.wikimedia.org/wikipedia/commons/a/ae/Tic_Tac_Toe.gif'}}
+                source={{ uri: 'https://media0.giphy.com/media/3o85xu3OLHOVvzZNra/giphy.gif'}}
                 style={styles.img}
+                resizeMode='cover'
               />
             </View>
             <View style={{paddingTop: 40}}>

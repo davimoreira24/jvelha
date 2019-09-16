@@ -72,7 +72,8 @@ export default class GameScreen extends React.Component {
     //Sem mudança de titulos
     this.state.totalMoves++;
     if(this.state.totalMoves === 9){
-        alert("Empatezada");
+      alert("Jogador X Ganhou");
+         
         this.initializeGame();
     }
     let value = this.state.gameState[row][col]
@@ -131,11 +132,11 @@ export default class GameScreen extends React.Component {
     return (
       <View style={{justifyContent:'center', alignItems:'center'}}>
         <View style={styles.banner}>
-          <Text style={styles.title}>TIC TAC TOE</Text>
+          <Text style={styles.title}>Jogo da Velha</Text>
         </View> 
         <View style={{paddingBottom: 20}}>
-        {this.state.playerX && <Text style={{fontSize: 30, color:'red'}}>Player X</Text> }
-        {this.state.playerO && <Text style={{fontSize: 30, color:'green'}}>Player O</Text>}
+        {this.state.playerX && <Text style={{fontSize: 30, color:'red'}}>Jogador X</Text> }
+        {this.state.playerO && <Text style={{fontSize: 30, color:'green'}}>Jogador O</Text>}
         </View>
 
         <View style={{flexDirection: 'row'}}>
