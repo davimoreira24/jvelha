@@ -24,7 +24,7 @@ export default class App extends React.Component {
         (
           <View style={{justifyContent:'center', alignItems:'center'}}>
             <View style={[styles.banner, {marginBottom: 40}]}>
-              <Text style={{fontSize: 18, fontWeight: 'bold',marginLeft:8}}>Jogo da Velha</Text>
+              <Text style={{fontSize: 40}}>Jogo da Velha</Text>
             </View>
             <View>
               <Image

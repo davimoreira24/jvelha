@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Text, TouchableOpacity, Button } from 'react-native';
+import { StyleSheet, View, Text, TouchableOpacity, Button,Alert } from 'react-native';
 import { MaterialCommunityIcons as Icon} from 'react-native-vector-icons';
 
 
@@ -72,8 +72,11 @@ export default class GameScreen extends React.Component {
     //Sem mudança de titulos
     this.state.totalMoves++;
     if(this.state.totalMoves === 9){
-      alert("Jogador X Ganhou");
-         
+     Alert.alert("Empatezada",
+     "Infelizmente Ninguém ganhou",
+     [
+        {text:'Dale', onPress: () => console.log('Inicie um novo jogo')}
+     ],)
         this.initializeGame();
     }
     let value = this.state.gameState[row][col]
@@ -107,15 +110,22 @@ export default class GameScreen extends React.Component {
     //Vencedor
     let winner = this.getWinnerPlayer()
     if (winner == 1) {
-      alert("Jogador X Ganhou");
+      Alert.alert("Jogador X Ganhou",
+      "Parabéns Jogador X ",
+      [
+        {text: 'Dale', onPress: () => console.log('Inicie um novo jogo')}
+      ],);
       this.initializeGame();
     }
     else if (winner == -1) {
-      alert("Jogador O Ganhou");
+      Alert.alert("Jogador O Ganhou",
+      "Parabéns Jogador O ",
+      [
+        {text: 'Dale', onPress: () => console.log('Inicie um novo jogo')}
+      ],);
       this.initializeGame();
     }
   }
-
   renderIcon = (row, col) => {
     let value = this.state.gameState[row][col]
     switch (value){
@@ -202,7 +212,8 @@ const styles = StyleSheet.create({
     fontSize: 70,
   },
   title:{
-    fontSize: 70,
+    fontSize: 50,
+    marginTop:10,
   },
   banner:{
       marginBottom: 20, 
